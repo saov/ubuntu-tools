@@ -7,7 +7,7 @@ https://hub.docker.com/r/saov/ubuntu-tools
 
 Docker Run
 ```
-docker run -it -d --name ubuntu-tools saov/ubuntu-tools /bin/bash
+docker run --rm -it --name ubuntu-tools saov/ubuntu-tools /bin/bash
 ```
 
 Kubernetes Pod
