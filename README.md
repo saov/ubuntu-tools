@@ -5,9 +5,13 @@ Docker Image
 
 https://hub.docker.com/r/saov/ubuntu-tools
 
+Docker Set Variables
+```
+${hostname} = ${nodename} = hostname
+
 Docker Run
 ```
-docker run --rm -it --name ubuntu-tools -h ubuntu-tools saov/ubuntu-tools /bin/bash
+docker run --rm -it --name ubuntu-tools -e ClusterKubernetes=${nodename} -e NodeName=${hostname} -h ubuntu-tools saov/ubuntu-tools /bin/bash
 ```
 
 Kubernetes Create Pod
