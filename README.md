@@ -13,7 +13,6 @@ docker run --rm -it --name ubuntu-tools -h ubuntu-tools saov/ubuntu-tools /bin/b
 Kubernetes Pod
 ```
 kubectl run ubuntu-tools --rm -i --tty --restart=Never --image=saov/ubuntu-tools:latest -- /bin/bash
-```
 
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
@@ -38,3 +37,4 @@ spec:
       cpu: 100m
       memory: 100Mi
 EOF
+```
