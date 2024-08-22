@@ -10,7 +10,7 @@ Docker Run
 docker run --rm -it --name ubuntu-tools -h ubuntu-tools saov/ubuntu-tools /bin/bash
 ```
 
-Kubernetes Pod
+Kubernetes Create Pod
 ```
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
@@ -35,6 +35,9 @@ spec:
       cpu: 100m
       memory: 100Mi
 EOF
+```
 
+Kubernetes Exec Pod
+```
 kubectl exec --stdin --tty ubuntu-tools -- /bin/bash
 ```
