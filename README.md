@@ -12,7 +12,7 @@ ${hostname} = ${nodename} = hostname
 
 Docker Run
 ```
-docker run --rm -it --name ubuntu-tools -e ClusterKubernetes=${nodename} -e NodeName=${hostname} -h ubuntu-tools saov/ubuntu-tools /bin/bash
+docker run --rm -it --name ubuntu-tools -e Cluster=${nodename} -e Node=${hostname} -h ubuntu-tools saov/ubuntu-tools /bin/bash
 ```
 
 Kubernetes Create Pod
@@ -28,9 +28,9 @@ spec:
   - name: ubuntu-tools
     image: saov/ubuntu-tools:latest
     env:
-    - name: ClusterKubernetes
+    - name: Cluster
       value: $(kubectl config get-contexts --no-headers | awk '{print $3}')
-    - name: NodeName
+    - name: Node
       valueFrom:
        fieldRef:
         fieldPath: spec.nodeName
