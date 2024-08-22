@@ -12,7 +12,7 @@ ${hostname} = ${nodename} = hostname
 
 Docker Run
 ```
-docker run --rm -it --name ubuntu-tools -e Cluster=${nodename} -e Node=${hostname} -h ubuntu-tools saov/ubuntu-tools /bin/bash
+docker run --rm -it --name ubuntu-tools -e Cluster=${hostname} -e Node=${nodename} -h ubuntu-tools saov/ubuntu-tools /bin/bash
 ```
 
 Kubernetes Create Pod
