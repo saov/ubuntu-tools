@@ -14,3 +14,27 @@ Kubernetes Pod
 ```
 kubectl run ubuntu-tools --rm -i --tty --restart=Never --image=saov/ubuntu-tools:latest -- /bin/bash
 ```
+
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+ name: ubuntu-tools
+ namespace: default
+spec:
+ containers:
+  - name: ubuntu-tools
+    image: saov/ubuntu-tools:latest
+    env:
+    - name: ClusterKubernetes
+      value: $(kubectl config get-contexts --no-headers | awk '{print $3}')
+    - name: NodeName
+      valueFrom:
+       fieldRef:
+        fieldPath: spec.nodeName
+    command: ["/bin/sh", "-ec", "sleep infinity"]
+    resources:
+     limits:
+      cpu: 100m
+      memory: 100Mi
+EOF
