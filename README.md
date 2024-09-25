@@ -1,5 +1,5 @@
 # ubuntu-tools
-Ubuntu 24.04 LTS With sudo, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, wget and dos2unix installed
+Ubuntu 24.04 LTS With sudo, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, traceroute, whois, wget and dos2unix installed
 
 Docker Image
 
