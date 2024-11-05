@@ -1,5 +1,5 @@
 # ubuntu-tools
-Ubuntu 24.10 LTS With sudo, fastfetch, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, traceroute, whois, wget and dos2unix installed
+Ubuntu 24.10 LTS With sudo, fastfetch, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, traceroute, whois, wget, dos2unix, apt-transport-https, software-properties-common, gnupg, azure-cli, powershell and terraform installed
 
 Docker Image
 
