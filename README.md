@@ -37,8 +37,8 @@ spec:
     command: ["/bin/sh", "-ec", "sleep infinity"]
     resources:
      limits:
-      cpu: 100m
-      memory: 100Mi
+      cpu: 250m
+      memory: 500Mi
 EOF
 ```
 
