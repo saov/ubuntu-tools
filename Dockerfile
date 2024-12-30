@@ -1,4 +1,4 @@
-FROM ubuntu:oracular-20241009
+FROM ubuntu:plucky-20241213
 RUN apt update
 RUN apt list --upgradable
 RUN apt upgrade -y
