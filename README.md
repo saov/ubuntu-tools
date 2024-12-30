@@ -1,5 +1,5 @@
 # ubuntu-tools
-Ubuntu 25.04 With sudo, fastfetch, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, traceroute, whois, wget, dos2unix, apt-transport-https, software-properties-common, gnupg, azure-cli, powershell and terraform dotnet installed
+Ubuntu 25.04 With sudo, fastfetch, nano, vim, git, inetutils-ping, curl, netcat-traditional, net-tools, telnet, dnsutils, traceroute, whois, wget, dos2unix, apt-transport-https, software-properties-common, gnupg, azure-cli, powershell, terraform and dotnet installed
 
 Docker Image
 
