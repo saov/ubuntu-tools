@@ -1,3 +1,4 @@
+#Base Image
 FROM ubuntu:plucky-20241213
 RUN apt update
 RUN apt list --upgradable
@@ -21,13 +22,17 @@ RUN apt update
 RUN apt list --upgradable
 RUN apt upgrade -y
 RUN apt clean
+#User
 RUN ln -sf /bin/bash /bin/sh
 RUN useradd -p "$(openssl passwd -1 '')" -ms /bin/bash saov
 RUN usermod -aG sudo saov
 USER saov
 WORKDIR /home/saov
+#Install oh-my-bash
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+#Configured fastfetch
 RUN echo 'fastfetch -l ubuntu2_old --color-title green --logo-preserve-aspect-ratio true --color-keys blue --no-buffer true --percent-color-green yellow -s Title:Break:OS:Kernel:Host:Bios:Shell:Terminal:CPU:CPUUsage:Memory:Swap:Disk:LocalIp:PublicIp:Break:Colors' >> ~/.bashrc
+#Info
 RUN echo 'echo -e "\n\e[1;34mSAOV ubuntu-tools version\e[1;0m: \e[1;32m2.0\e[1;0m"' >> ~/.bashrc
 RUN echo 'echo -e "\e[1;34mSudo password\e[1;0m: \e[1;33m<<\e[1;32mENTER\e[1;33m>>\e[1;0m"' >> ~/.bashrc
 RUN echo 'echo -e "\e[1;34mCluster\e[1;0m: \e[1;36m$Cluster\e[1;0m"' >> ~/.bashrc
