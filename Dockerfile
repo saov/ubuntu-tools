@@ -37,6 +37,6 @@ RUN echo 'echo -e "\n\e[1;34mSAOV ubuntu-tools version\e[1;0m: \e[1;32m2.0\e[1;0
 RUN echo 'echo -e "\e[1;34mSudo password\e[1;0m: \e[1;33m<<\e[1;32mENTER\e[1;33m>>\e[1;0m"' >> ~/.bashrc
 RUN echo 'echo -e "\e[1;34mCluster\e[1;0m: \e[1;36m$Cluster\e[1;0m"' >> ~/.bashrc
 RUN echo 'echo -e "\e[1;34mNode\e[1;0m: \e[1;36m$Node\e[1;0m"' >> ~/.bashrc
-RUN echo 'echo -e "\e[1;34mAzure-Cli\e[1;0m: \e[1;36m2.65.0\e[1;0m"' >> ~/.bashrc
+RUN echo 'echo -e "\e[1;34mAzure-Cli\e[1;0m: \e[1;36m2.67.0\e[1;0m"' >> ~/.bashrc
 RUN echo 'echo -e "\e[1;34mPowershell\e[1;0m: \e[1;36m7.4.6\e[1;0m"' >> ~/.bashrc
-RUN echo 'echo -e "\e[1;34mTerraform\e[1;0m: \e[1;36m1.9.8\e[1;0m\n"' >> ~/.bashrc
+RUN echo 'echo -e "\e[1;34mTerraform\e[1;0m: \e[1;36m1.10.3\e[1;0m\n"' >> ~/.bashrc
